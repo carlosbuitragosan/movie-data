@@ -28,20 +28,31 @@ const rating = document.querySelector('#rating');
 const runtime = document.querySelector('#runtime');
 const cast = document.querySelector('#cast');
 
-const addMovie = (key, value) => {
-    return movieData[key] = value;
-  }
+// const addMovie = (key, value) => {
+//     return movieData[key] = value;
+//   }
 form.addEventListener('submit', event => {
     event.preventDefault();
-    addMovie(`${title.value}`, {
-        rating: `${rating.value}`, 
-        runtime: `${runtime.value}`,
-        year: `${year.value}`,
-        plot: `${plot.value}`,
-        cast: [`${cast.value}`]
-      })
-      movieCard.innerHTML = '';
-      displayMovieCard();
+    movieCard.insertAdjacentHTML('beforeend',
+        `<h2 class="movie__title">${title.value}</h2>
+        <h3 class="plot">Plot</h3>
+        <p class="plot__description">${plot.value}</p>
+        <h3 class="cast"></h3>
+        <p class="cast__description">${cast.value}.</p>
+        <h3 class="runtime">Runtime</h3>
+        <p class="runtime__description">${runtime.value} min.</p>
+        <h3 class="rating">Rating</h3>
+        <p class="rating__descriptioin">${rating.value}</p>
+        <h3 class="year">Year</h3>
+        <p class="year__description">${year.value}</p>
+        `);
+    // addMovie(`${title.value}`, {
+    //     rating: `${rating.value}`, 
+    //     runtime: `${runtime.value}`,
+    //     year: `${year.value}`,
+    //     plot: `${plot.value}`,
+    //     cast: [`${cast.value}`]
+    //   })
 });
 
 
