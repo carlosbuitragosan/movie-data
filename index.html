@@ -9,10 +9,18 @@
     </head>
 
     <body>
+        <header>
+            <h1 class="header__title">Your movie Library</h1>
+            <a>Sort</a>
+                <button class="sort-by-name__button">Name (alphabetically)</button>
+                <button>Year (most recent)</button>
+                <button>Rating (highest rating)</button>
+
+        </header>
         <div class="movie">
         </div>
 
-        <form id="movie__form">
+        <form id="movie__form" action="data.js">
 
             <label for="title">Title</label>
             <input id="title" type="text" placeholder="title">
