@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    font-family: 'Dosis', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFF7D6;
+    text-shadow:  1px 1px 2px #000;
+
+}
+
+body {
+    background-image: linear-gradient(to left top, #030c23, #0c1429, #13192e, #1b1e34, #22243a, #292940, #2f2e46, #36334c, #3e3954, #463e5c, #4f4464, #584a6c);
+
+}
+button {
+    padding: .3rem .7rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    text-decoration: underline;
+}
+
+hr {
+    box-shadow: 0 0 16px 2px #D5A418;
+    border: 1px solid #FFF7D6;
+}
+button:hover {
+    cursor: pointer;
+}
+                                 /* **** HEADER ***** */
+
+      /* ***** SORT MENU *****                               */
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__menu {
+    display: flex;
+    flex-direction: column;
+}
+.header__title {
+    text-align: center;
+    font-weight: 900;
+    color: #030C23;
+    text-shadow: 0 0 5px #FFF7D6, 0 0 10px #FFF7D6, 0 0 15px #FFF7D6, 0 0 20px #D5A418, 0 0 30px #D5A418, 0 0 40px #D5A418, 0 0 55px #D5A418, 0 0 75px #D5A418;
+}
+
+.menu__toggle_view {
+    display: none;
+}
+
+
+
+
+
+
+    /* ***** FORM MENU ****** */
+.form__toggle_view {
+    display: none;
+}
+
+.form__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input__container { 
+    display: flex;
+    flex-direction: column; 
+    padding: .5rem 0;  
+    width: 90vw;
+}
+input,
+textarea {
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 8px;
+    color: #030C23;
+    text-shadow: none;
+}
+
+#cast,
+#plot {
+    height: 20vw;
+}
+
+::placeholder {
+    text-shadow: none;
+    font-weight: 100;
+    color: #737687;
+}
+#submit {
+    font-size: 1.2rem;
+    padding: .5rem;
+    background-color: #D5A418;
+}
+
+.form__title_button {
+    margin-top: 2rem;
+}
+
+
+    /* ***** SUCCESS SAVED! MESSAGE ****** */
+
+.form__success_message {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message__saved {
+    position: absolute;
+    animation: buttons .1s linear;
+    transition: .3s;
+    display: none;
+}
+
+.enter__info {
+    position: absolute;
+    animation: buttons .1s linear;
+    transition: .3s;
+    display: none;
+}
+@keyframes buttons {
+    0% {
+        transform: scale(.1);
+    }
+    50% {
+        transform: scale(.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+      /* ***** MOVIE CARDS  ******** */
+
+.movie__each {
+    margin-top: 5rem;
+    padding: 0 .5rem;
+}
+
+.movie__each h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #00C6BF;
+}
+.movie__each h3 {
+    margin-bottom: 0;
+    color: #D5A418;
+}
+.movie__each p {
+    margin-top: .1rem;
+}
+
+@media screen and (min-width: 800px) {
+    
+
+
+    /* ******** FORM ********* */
+    input,
+    textarea {
+        font-size: 1.2rem;
+        padding: .4rem;
+    }
+
+    .input__container {
+        width: 50vw;
+    }
+} 

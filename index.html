@@ -3,46 +3,85 @@
     <head>
         <meta charset="utf-8">
         <meta name: "viewport" content = "width = devide-width, initial-scale = 1.0">
+        <title>Movie Data</title>
         <link rel="stylesheet" type="text/css" href="normalize.css">
         <link rel="stylesheet" type="text/css" href="styles.css">
-        <title>Movie Data</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <header>
-            <h1 class="header__title">Your movie Library</h1>
-            <a>Sort</a>
-                <button class="sort-by-name__button">Name (alphabetically)</button>
-                <button>Year (most recent)</button>
-                <button>Rating (highest rating)</button>
+            <h1 class="header__title">AWESOME MOVIES</h1>
+            
+            <div class="menu">
+                <div class="header__menu">
+
+                    <button class="header__sort">SORT</button>
+
+                    <div class="menu__list menu__toggle_view">
+                        <button class="sort-by-name__button">Name (alphabetically)</button>
+                        <button class="sort-by-year__button">Year (most recent)</button>
+                        <button class="sort-by-rating__button">Rating (highest rating)</button>
+                    </div>
+                </div>
+                    
+            
+                <div class="form__container">
+                    <button class="form__title_button">ADD YOUR OWN MOVIE</button>
+                    <form id="movie__form" class="form__toggle_view" name="add your own movie">
+
+                        <div class="input__container">
+                            <label for="title">Title</label>
+                            <input id="title" type="text" >
+                        </div>
+
+                        <div class="input__container">
+                            <label for="plot">Plot</label>
+                            <textarea id="plot" type="text"></textarea>
+                        </div>
+
+                        <div class="input__container">
+                            <label for="cast">Cast</label>
+                            <textarea id="cast" type="text" placeholder="separate with a comma"></textarea>
+                        </div>
+
+                        <div class="input__container">
+                            <label for="rating">Rating</label>
+                            <input id="rating" type="number" step=".1" min="1" max="10">
+                        </div>
+
+                        <div class="input__container">
+                            <label for="runtime">Runtime</label>
+                            <input id="runtime" type="number" placeholder="in minutes e.g. 150">
+                        </div>
+
+                        <div class="input__container">
+                            <label for="year">Year</label>
+                            <input id="year" type="number" min="1900" max="2050">
+                        </div>
+
+                        <div class="input__container">
+                            <input id="submit" type="submit" value="SUBMIT">
+                        </div>
+                        <div class="form__success_message">
+                            <p class="message__saved">saved!</p>
+                            <p class="enter__info">Please enter details</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
 
         </header>
-        <div class="movie">
-        </div>
+        <main>
+            <div class="movie">
+            </div>
+        </main>
 
-        <form id="movie__form" action="data.js">
-
-            <label for="title">Title</label>
-            <input id="title" type="text" placeholder="title">
-
-            <label for="plot">Plot</label>
-            <input id="plot" type="text" placeholder="plot">
-
-            <label for="cast">Cast</label>
-            <input id="cast" type="text" placeholder="cast">
-
-            <label for="rating">Rating</label>
-            <input id="rating" type="text" placeholder="rating">
-
-            <label for="runtime">Runtime</label>
-            <input id="runtime" type="text" placeholder="runtime">
-
-            <label for="year">Year</label>
-            <input id="year" type="text" placeholder="year">
-
-            <input id="submit" type="submit" value="save">
-        </form>
+        
         <script src="data.js"></script>
         <script src="script.js"></script>
+
     </body>
 </html>
